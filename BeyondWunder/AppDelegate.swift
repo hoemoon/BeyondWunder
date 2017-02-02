@@ -2,20 +2,28 @@
 //  AppDelegate.swift
 //  BeyondWunder
 //
-//  Created by hoemoon on 07/02/2017.
+//  Created by hoemoon on 13/02/2017.
 //  Copyright © 2017 hoemoon. All rights reserved.
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        do {
+//            try FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
+//        } catch {}
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: TaskListViewController(style: .plain))
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

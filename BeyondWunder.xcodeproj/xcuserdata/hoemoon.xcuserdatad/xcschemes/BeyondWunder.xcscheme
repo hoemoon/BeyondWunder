@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F4500471E49BCF60077963A"
+               BlueprintIdentifier = "6F53FE791E50C4010012B2A8"
                BuildableName = "BeyondWunder.app"
                BlueprintName = "BeyondWunder"
                ReferencedContainer = "container:BeyondWunder.xcodeproj">
@@ -28,21 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F45005B1E49BCF60077963A"
-               BuildableName = "BeyondWunderTests.xctest"
-               BlueprintName = "BeyondWunderTests"
-               ReferencedContainer = "container:BeyondWunder.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F4500471E49BCF60077963A"
+            BlueprintIdentifier = "6F53FE791E50C4010012B2A8"
             BuildableName = "BeyondWunder.app"
             BlueprintName = "BeyondWunder"
             ReferencedContainer = "container:BeyondWunder.xcodeproj">
@@ -65,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F4500471E49BCF60077963A"
+            BlueprintIdentifier = "6F53FE791E50C4010012B2A8"
             BuildableName = "BeyondWunder.app"
             BlueprintName = "BeyondWunder"
             ReferencedContainer = "container:BeyondWunder.xcodeproj">
@@ -84,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F4500471E49BCF60077963A"
+            BlueprintIdentifier = "6F53FE791E50C4010012B2A8"
             BuildableName = "BeyondWunder.app"
             BlueprintName = "BeyondWunder"
             ReferencedContainer = "container:BeyondWunder.xcodeproj">
