@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085312114F68C977B492D93D /* Pods_BeyondWunder_BeyondWunderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1BDBD248C73DF3CF0A0F73 /* Pods_BeyondWunder_BeyondWunderTests.framework */; };
+		6D43C23BD07F54EBEDEAEFF5 /* Pods_BeyondWunderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3DF296BF2E43A5CE5C9310 /* Pods_BeyondWunderTests.framework */; };
 		6F45004C1E49BCF60077963A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45004B1E49BCF60077963A /* AppDelegate.swift */; };
-		6F45004E1E49BCF60077963A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45004D1E49BCF60077963A /* ViewController.swift */; };
-		6F4500511E49BCF60077963A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F45004F1E49BCF60077963A /* Main.storyboard */; };
+		6F45004E1E49BCF60077963A /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45004D1E49BCF60077963A /* TaskListViewController.swift */; };
 		6F4500531E49BCF60077963A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F4500521E49BCF60077963A /* Assets.xcassets */; };
 		6F4500561E49BCF60077963A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4500541E49BCF60077963A /* LaunchScreen.storyboard */; };
 		6F4500611E49BCF60077963A /* BeyondWunderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4500601E49BCF60077963A /* BeyondWunderTests.swift */; };
+		6F45006C1E49BE430077963A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45006B1E49BE430077963A /* StartViewController.swift */; };
+		6F45006E1E49BEA50077963A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45006D1E49BEA50077963A /* TaskViewController.swift */; };
+		6F4500701E4A11860077963A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45006F1E4A11860077963A /* SignupViewController.swift */; };
+		6F4500721E4A11950077963A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4500711E4A11950077963A /* LoginViewController.swift */; };
+		6FDAB9191E4AE69200C74A83 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDAB9181E4AE69200C74A83 /* Model.swift */; };
+		6FDAB91B1E4AFCBB00C74A83 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FDAB91A1E4AFCBB00C74A83 /* Storyboard.storyboard */; };
+		9EE7D6D97AA25DAD85AA4E0C /* Pods_BeyondWunder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CCC781B443CBE29F0C818E /* Pods_BeyondWunder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +34,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CCC781B443CBE29F0C818E /* Pods_BeyondWunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeyondWunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D7C5DA02ABA776534B2C1C /* Pods-BeyondWunder-BeyondWunderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunder-BeyondWunderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunder-BeyondWunderTests/Pods-BeyondWunder-BeyondWunderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54263F8CC2C1949D25EC07C2 /* Pods-BeyondWunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunder/Pods-BeyondWunder.release.xcconfig"; sourceTree = "<group>"; };
 		6F4500481E49BCF60077963A /* BeyondWunder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeyondWunder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F45004B1E49BCF60077963A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F45004D1E49BCF60077963A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F4500501E49BCF60077963A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F45004D1E49BCF60077963A /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		6F4500521E49BCF60077963A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F4500551E49BCF60077963A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F4500571E49BCF60077963A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F45005C1E49BCF60077963A /* BeyondWunderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeyondWunderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4500601E49BCF60077963A /* BeyondWunderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeyondWunderTests.swift; sourceTree = "<group>"; };
 		6F4500621E49BCF60077963A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F45006B1E49BE430077963A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		6F45006D1E49BEA50077963A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		6F45006F1E4A11860077963A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		6F4500711E4A11950077963A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6FDAB9181E4AE69200C74A83 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6FDAB91A1E4AFCBB00C74A83 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7D3DF296BF2E43A5CE5C9310 /* Pods_BeyondWunderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeyondWunderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1BDBD248C73DF3CF0A0F73 /* Pods_BeyondWunder_BeyondWunderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeyondWunder_BeyondWunderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74361B4BF340842A9929CB6 /* Pods-BeyondWunderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunderTests/Pods-BeyondWunderTests.release.xcconfig"; sourceTree = "<group>"; };
+		B07A53DEBCFCE688EBB0E83B /* Pods-BeyondWunderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunderTests/Pods-BeyondWunderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3EADD8FC6011FDC9A18F7D1 /* Pods-BeyondWunder-BeyondWunderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunder-BeyondWunderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunder-BeyondWunderTests/Pods-BeyondWunder-BeyondWunderTests.release.xcconfig"; sourceTree = "<group>"; };
+		E57D7E607AFD70323EC7370C /* Pods-BeyondWunder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondWunder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondWunder/Pods-BeyondWunder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE7D6D97AA25DAD85AA4E0C /* Pods_BeyondWunder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +73,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D43C23BD07F54EBEDEAEFF5 /* Pods_BeyondWunderTests.framework in Frameworks */,
+				085312114F68C977B492D93D /* Pods_BeyondWunder_BeyondWunderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BF8A79FD08961FE5FDA6B4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00CCC781B443CBE29F0C818E /* Pods_BeyondWunder.framework */,
+				7D3DF296BF2E43A5CE5C9310 /* Pods_BeyondWunderTests.framework */,
+				8F1BDBD248C73DF3CF0A0F73 /* Pods_BeyondWunder_BeyondWunderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		451762981299301DA77DA5EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E57D7E607AFD70323EC7370C /* Pods-BeyondWunder.debug.xcconfig */,
+				54263F8CC2C1949D25EC07C2 /* Pods-BeyondWunder.release.xcconfig */,
+				B07A53DEBCFCE688EBB0E83B /* Pods-BeyondWunderTests.debug.xcconfig */,
+				A74361B4BF340842A9929CB6 /* Pods-BeyondWunderTests.release.xcconfig */,
+				51D7C5DA02ABA776534B2C1C /* Pods-BeyondWunder-BeyondWunderTests.debug.xcconfig */,
+				E3EADD8FC6011FDC9A18F7D1 /* Pods-BeyondWunder-BeyondWunderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F45003F1E49BCF60077963A = {
 			isa = PBXGroup;
 			children = (
 				6F45004A1E49BCF60077963A /* BeyondWunder */,
 				6F45005F1E49BCF60077963A /* BeyondWunderTests */,
 				6F4500491E49BCF60077963A /* Products */,
+				451762981299301DA77DA5EC /* Pods */,
+				3BF8A79FD08961FE5FDA6B4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +127,15 @@
 		6F45004A1E49BCF60077963A /* BeyondWunder */ = {
 			isa = PBXGroup;
 			children = (
+				6FDAB9171E4AE12900C74A83 /* StartView */,
 				6F45004B1E49BCF60077963A /* AppDelegate.swift */,
-				6F45004D1E49BCF60077963A /* ViewController.swift */,
-				6F45004F1E49BCF60077963A /* Main.storyboard */,
+				6F45004D1E49BCF60077963A /* TaskListViewController.swift */,
+				6F45006D1E49BEA50077963A /* TaskViewController.swift */,
 				6F4500521E49BCF60077963A /* Assets.xcassets */,
 				6F4500541E49BCF60077963A /* LaunchScreen.storyboard */,
 				6F4500571E49BCF60077963A /* Info.plist */,
+				6FDAB9181E4AE69200C74A83 /* Model.swift */,
+				6FDAB91A1E4AFCBB00C74A83 /* Storyboard.storyboard */,
 			);
 			path = BeyondWunder;
 			sourceTree = "<group>";
@@ -96,6 +149,16 @@
 			path = BeyondWunderTests;
 			sourceTree = "<group>";
 		};
+		6FDAB9171E4AE12900C74A83 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				6F45006B1E49BE430077963A /* StartViewController.swift */,
+				6F45006F1E4A11860077963A /* SignupViewController.swift */,
+				6F4500711E4A11950077963A /* LoginViewController.swift */,
+			);
+			name = StartView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F4500651E49BCF60077963A /* Build configuration list for PBXNativeTarget "BeyondWunder" */;
 			buildPhases = (
+				5A44042CF3501731AA090A2D /* [CP] Check Pods Manifest.lock */,
 				6F4500441E49BCF60077963A /* Sources */,
 				6F4500451E49BCF60077963A /* Frameworks */,
 				6F4500461E49BCF60077963A /* Resources */,
+				0602AD568BD3A722EE44EA43 /* [CP] Embed Pods Frameworks */,
+				5CBCE891580042187BC19C8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F4500681E49BCF60077963A /* Build configuration list for PBXNativeTarget "BeyondWunderTests" */;
 			buildPhases = (
+				C297BD1F65DDD6B0A0C76E0C /* [CP] Check Pods Manifest.lock */,
 				6F4500581E49BCF60077963A /* Sources */,
 				6F4500591E49BCF60077963A /* Frameworks */,
 				6F45005A1E49BCF60077963A /* Resources */,
+				C6608464888741C56270D2FA /* [CP] Embed Pods Frameworks */,
+				C56658659C8A6737B9CD055F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +252,7 @@
 			files = (
 				6F4500561E49BCF60077963A /* LaunchScreen.storyboard in Resources */,
 				6F4500531E49BCF60077963A /* Assets.xcassets in Resources */,
-				6F4500511E49BCF60077963A /* Main.storyboard in Resources */,
+				6FDAB91B1E4AFCBB00C74A83 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,13 +265,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0602AD568BD3A722EE44EA43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondWunder/Pods-BeyondWunder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A44042CF3501731AA090A2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CBCE891580042187BC19C8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondWunder/Pods-BeyondWunder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C297BD1F65DDD6B0A0C76E0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C56658659C8A6737B9CD055F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondWunderTests/Pods-BeyondWunderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6608464888741C56270D2FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondWunderTests/Pods-BeyondWunderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F4500441E49BCF60077963A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F45004E1E49BCF60077963A /* ViewController.swift in Sources */,
+				6FDAB9191E4AE69200C74A83 /* Model.swift in Sources */,
+				6F4500721E4A11950077963A /* LoginViewController.swift in Sources */,
+				6F45004E1E49BCF60077963A /* TaskListViewController.swift in Sources */,
+				6F45006E1E49BEA50077963A /* TaskViewController.swift in Sources */,
+				6F4500701E4A11860077963A /* SignupViewController.swift in Sources */,
 				6F45004C1E49BCF60077963A /* AppDelegate.swift in Sources */,
+				6F45006C1E49BE430077963A /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +392,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6F45004F1E49BCF60077963A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F4500501E49BCF60077963A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6F4500541E49BCF60077963A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -337,6 +496,7 @@
 		};
 		6F4500661E49BCF60077963A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57D7E607AFD70323EC7370C /* Pods-BeyondWunder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UJ82UGU342;
@@ -350,6 +510,7 @@
 		};
 		6F4500671E49BCF60077963A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54263F8CC2C1949D25EC07C2 /* Pods-BeyondWunder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UJ82UGU342;
@@ -363,6 +524,7 @@
 		};
 		6F4500691E49BCF60077963A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07A53DEBCFCE688EBB0E83B /* Pods-BeyondWunderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +540,7 @@
 		};
 		6F45006A1E49BCF60077963A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74361B4BF340842A9929CB6 /* Pods-BeyondWunderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +573,7 @@
 				6F4500671E49BCF60077963A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F4500681E49BCF60077963A /* Build configuration list for PBXNativeTarget "BeyondWunderTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +582,7 @@
 				6F45006A1E49BCF60077963A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
