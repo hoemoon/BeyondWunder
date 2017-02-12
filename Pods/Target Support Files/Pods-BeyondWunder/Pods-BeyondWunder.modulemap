@@ -1,6 +1,0 @@
-framework module Pods_BeyondWunder {
-  umbrella header "Pods-BeyondWunder-umbrella.h"
-
-  export *
-  module * { export * }
-}
