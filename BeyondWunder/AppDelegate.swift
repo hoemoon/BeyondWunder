@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            try FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
 //        } catch {}
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: TableViewController(style: .plain))
+        window?.rootViewController = UINavigationController(rootViewController: TaskListController(style: .plain))
         window?.makeKeyAndVisible()
         
         return true

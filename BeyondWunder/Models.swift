@@ -34,6 +34,7 @@ final class TaskList: Object {
 }
 
 final class Task: Object {
+    dynamic var id = NSUUID().uuidString // swiftlint:disable:this variable_name
     dynamic var text = ""
     dynamic var completed = false
     
@@ -42,5 +43,9 @@ final class Task: Object {
     convenience init(text: String) {
         self.init()
         self.text = text
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
