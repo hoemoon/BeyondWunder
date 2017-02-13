@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TaskListController: UITableViewController {
+class TaskListViewController: UITableViewController {
     let realm = try! Realm()
     let results = try! Realm().objects(TaskList.self)
     var notificationToken: NotificationToken?
@@ -41,7 +41,7 @@ class TaskListController: UITableViewController {
     func setupUI() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.title = "TableView"
+        self.title = "TASK LISTS"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
     }
     
@@ -99,8 +99,13 @@ class TaskListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = results[indexPath.row]
-        let taskView = UINavigationController(rootViewController: TaskViewController(style: .plain))
-        present(taskView, animated: true, completion: nil)
+        let taskView = TaskViewController()
+        taskView.taskListId = item.id
+        taskView.taskListTitle = item.text
+        taskView.realm = realm
+        taskView.tasks = item.items
+        
+        self.navigationController?.pushViewController(taskView, animated: true)
         print(item)
     }
     
