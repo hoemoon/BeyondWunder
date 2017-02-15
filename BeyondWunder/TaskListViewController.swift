@@ -89,7 +89,7 @@ class TaskListViewController: UITableViewController {
                 realm.beginWrite()
                 let taskListId = self.results[indexPath.row].id
                 realm.create(TaskList.self, value: ["id": taskListId, "text": text], update: true)
-                print(self.results)
+//                print(self.results)
                 try! realm.commitWrite()
             })
             self.present(alertController, animated: true, completion: nil)
@@ -106,7 +106,7 @@ class TaskListViewController: UITableViewController {
         taskView.tasks = item.items
         
         self.navigationController?.pushViewController(taskView, animated: true)
-        print(item)
+//        print(item)
     }
     
     

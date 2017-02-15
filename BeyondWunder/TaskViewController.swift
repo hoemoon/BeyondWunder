@@ -40,8 +40,8 @@ class TaskViewController: UITableViewController {
     }
     
     func setupUI() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "taskCell")
-        
+
+        tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         self.title = taskListTitle
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
     }
@@ -83,9 +83,14 @@ class TaskViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
         let object = tasks[indexPath.row]
         cell.textLabel?.text = object.text
+        cell.tag = indexPath.row
+        cell.taskId = self.tasks[indexPath.row].id
+        cell.toggleCheck = Bool(self.tasks[indexPath.row].completed)
+        cell.realm = self.realm
+//        cell.tag = Int(self.tasks[indexPath.row].id)!
         return cell
     }
 
@@ -118,6 +123,10 @@ class TaskViewController: UITableViewController {
             self.present(alertController, animated: true, completion: nil)
         })
         return [deleteAction, editAction]
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
