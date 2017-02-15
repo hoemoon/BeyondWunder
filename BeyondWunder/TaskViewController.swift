@@ -15,12 +15,13 @@ class TaskViewController: UITableViewController {
     var taskListTitle:String?
     var tasks = List<Task>()
     var notificationToken: NotificationToken?
+    var sorted: Results<Task>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
-        self.notificationToken = tasks.addNotificationBlock { (changes: RealmCollectionChange) in
+        self.notificationToken = sorted.addNotificationBlock { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
                 self.tableView.reloadData()
@@ -82,15 +83,26 @@ class TaskViewController: UITableViewController {
         return tasks.count
     }
     
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
+//        cell.textLabel?.text = object.text
+//        cell.tag = indexPath.row
+//        cell.taskId = self.tasks[indexPath.row].id
+//        cell.tasks = self.tasks
+//        cell.toggleCheck = Bool(self.tasks[indexPath.row].completed)
+//        cell.realm = self.realm
+//        return cell
+//    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
-        let object = tasks[indexPath.row]
+        let object = sorted[indexPath.row]
         cell.textLabel?.text = object.text
         cell.tag = indexPath.row
-        cell.taskId = self.tasks[indexPath.row].id
-        cell.toggleCheck = Bool(self.tasks[indexPath.row].completed)
+        cell.taskId = object.id
+        cell.tasks = self.sorted
+        cell.toggleCheck = Bool(object.completed)
         cell.realm = self.realm
-//        cell.tag = Int(self.tasks[indexPath.row].id)!
         return cell
     }
 
@@ -126,11 +138,16 @@ class TaskViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
+        print(sourceIndexPath)
+        try! tasks.realm?.write {
+            tasks.move(from: sourceIndexPath.row, to: destinationIndexPath.row)
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailView = TaskDetailViewController()
         
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
 
 }

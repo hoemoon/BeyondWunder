@@ -13,6 +13,7 @@ class TaskCell: UITableViewCell {
     var checkButtonView: UIView!
     var toggleCheck: Bool!
     var realm: Realm!
+    var tasks :Results<Task>!
     var taskId: String!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -35,17 +36,42 @@ class TaskCell: UITableViewCell {
     }
     
     func checked() {
+//        let destinationIndexPath: IndexPath
         let task = realm.object(ofType: Task.self, forPrimaryKey: self.taskId)
-        if toggleCheck == true { // unchecked
+        print(toggleCheck)
+        if toggleCheck == true {
             self.realm.beginWrite()
             task?.completed = false
+//            let uncompletedCount = tasks.filter("completed = false").count
+//            destinationIndexPath = IndexPath(row: uncompletedCount - 1, section: 0)
+//            print(self.tag)
+//            print(tasks.count)
+//            tasks.move(from: self.tag, to: destinationIndexPath.row)
             try! self.realm.commitWrite()
             
-        } else { // checked
+        } else {
             self.realm.beginWrite()
             task?.completed = true
+//            destinationIndexPath = IndexPath(row: tasks.count - 1, section: 0)
+//            tasks.move(from: self.tag, to: destinationIndexPath.row)
             try! self.realm.commitWrite()
+            
         }
+        
+        // done 하면 젤 밑으로, undone 하면 undone 들 제일 위로
+        
+//        self.realm.beginWrite()
+//            if task.completed {
+//                // move cell to bottom
+//                destinationIndexPath = IndexPath(row: tasks.count - 1, section: 0)
+//            } else {
+//                // move cell just above the first completed item
+//                let completedCount = tasks.filter("completed = true").count
+//                destinationIndexPath = IndexPath(row: tasks.count - completedCount - 1, section: 0)
+//            }
+//        tasks.move(from: self.tag, to: destinationIndexPath.row)
+//        try! self.realm.commitWrite()
+
         
     }
     

@@ -104,6 +104,10 @@ class TaskListViewController: UITableViewController {
         taskView.taskListTitle = item.text
         taskView.realm = realm
         taskView.tasks = item.items
+        taskView.sorted = item.items.sorted(byKeyPath: "completed", ascending: true)
+//        print(item.items.sorted(byKeyPath: "completed", ascending: true))
+//        let rrr = item.items.sorted(byKeyPath: "completed", ascending: true)
+//        taskView.tasks = item.items.sorted(byKeyPath: "completed", ascending: true)
         
         self.navigationController?.pushViewController(taskView, animated: true)
 //        print(item)

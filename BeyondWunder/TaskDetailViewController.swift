@@ -12,8 +12,15 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    func setupUI() {
+        let helloView = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        helloView.text = "HELLO DETAIL VIEW"
+        view.addSubview(helloView)
+        view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
