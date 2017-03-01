@@ -40,8 +40,11 @@ class TaskViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = taskListTitle
+    }
+    
     func setupUI() {
-
         tableView.register(TaskCell.self, forCellReuseIdentifier: "taskCell")
         self.title = taskListTitle
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
@@ -83,21 +86,11 @@ class TaskViewController: UITableViewController {
         return tasks.count
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
-//        cell.textLabel?.text = object.text
-//        cell.tag = indexPath.row
-//        cell.taskId = self.tasks[indexPath.row].id
-//        cell.tasks = self.tasks
-//        cell.toggleCheck = Bool(self.tasks[indexPath.row].completed)
-//        cell.realm = self.realm
-//        return cell
-//    }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCell
         let object = sorted[indexPath.row]
-        cell.textLabel?.text = object.text
+        cell.taskText = object.text
         cell.tag = indexPath.row
         cell.taskId = object.id
         cell.tasks = self.sorted
@@ -129,7 +122,6 @@ class TaskViewController: UITableViewController {
                 realm.beginWrite()
                 let taskId = self.tasks[indexPath.row].id
                 realm.create(Task.self, value: ["id": taskId, "text": text], update: true)
-                print(self.tasks)
                 try! realm.commitWrite()
             })
             self.present(alertController, animated: true, completion: nil)
@@ -138,7 +130,6 @@ class TaskViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print(sourceIndexPath)
         try! tasks.realm?.write {
             tasks.move(from: sourceIndexPath.row, to: destinationIndexPath.row)
         }
@@ -146,7 +137,10 @@ class TaskViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailView = TaskDetailViewController()
-        
+        detailView.realm = self.realm
+        detailView.task = self.sorted[indexPath.row]
+        detailView.sorted = self.sorted
+        detailView.title = self.sorted[indexPath.row].text
         self.navigationController?.pushViewController(detailView, animated: true)
     }
 

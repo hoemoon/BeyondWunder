@@ -12,13 +12,13 @@ import RealmSwift
 class TaskListViewController: UITableViewController {
     let realm = try! Realm()
     let results = try! Realm().objects(TaskList.self)
+    let sortedByDate = try! Realm().objects(TaskList.self).sorted(byKeyPath: "createdAt", ascending: true)
     var notificationToken: NotificationToken?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        self.notificationToken = results.addNotificationBlock { (changes: RealmCollectionChange) in
+        self.notificationToken = sortedByDate.addNotificationBlock { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
                 self.tableView.reloadData()
@@ -48,12 +48,12 @@ class TaskListViewController: UITableViewController {
     
     // Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return sortedByDate.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let object = results[indexPath.row]
+        let object = sortedByDate[indexPath.row]
         cell.textLabel?.text = object.text
         return cell
     }
@@ -61,7 +61,7 @@ class TaskListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             realm.beginWrite()
-            realm.delete(results[indexPath.row])
+            realm.delete(sortedByDate[indexPath.row])
             try! realm.commitWrite()
         }
     }
@@ -70,7 +70,7 @@ class TaskListViewController: UITableViewController {
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete" , handler: { (action:UITableViewRowAction!, indexPath:IndexPath!) -> Void in
             let realm = self.realm
             realm.beginWrite()
-            realm.delete(self.results[indexPath.row])
+            realm.delete(self.sortedByDate[indexPath.row])
             try! realm.commitWrite()
         })
         
@@ -87,9 +87,8 @@ class TaskListViewController: UITableViewController {
                 
                 let realm = self.realm
                 realm.beginWrite()
-                let taskListId = self.results[indexPath.row].id
+                let taskListId = self.sortedByDate[indexPath.row].id
                 realm.create(TaskList.self, value: ["id": taskListId, "text": text], update: true)
-//                print(self.results)
                 try! realm.commitWrite()
             })
             self.present(alertController, animated: true, completion: nil)
@@ -98,31 +97,15 @@ class TaskListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = results[indexPath.row]
+        let item = sortedByDate[indexPath.row]
         let taskView = TaskViewController()
         taskView.taskListId = item.id
         taskView.taskListTitle = item.text
         taskView.realm = realm
         taskView.tasks = item.items
         taskView.sorted = item.items.sorted(byKeyPath: "completed", ascending: true)
-//        print(item.items.sorted(byKeyPath: "completed", ascending: true))
-//        let rrr = item.items.sorted(byKeyPath: "completed", ascending: true)
-//        taskView.tasks = item.items.sorted(byKeyPath: "completed", ascending: true)
-        
         self.navigationController?.pushViewController(taskView, animated: true)
-//        print(item)
     }
-    
-    
-    // Actions
-//    func backgroundAdd() {
-//        DispatchQueue.global().async {
-//            let realm = try! Realm()
-//            realm.beginWrite()
-//            realm.create(Task.self, value: ["text": TableViewController.randomString()])
-//            try! realm.commitWrite()
-//        }
-//    }
     
     
     func add() {
@@ -143,11 +126,6 @@ class TaskListViewController: UITableViewController {
             }
         })
         present(alertController, animated: true, completion: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
